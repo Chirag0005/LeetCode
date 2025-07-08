@@ -5,11 +5,11 @@ public:
         if (n < 3) return false;
 
         stack<int> st;
-        int third = INT_MIN;  // This is the middle value in the 132 pattern (nums[k])
+        int third = INT_MIN;  
 
         for (int i = n - 1; i >= 0; i--) {
             if (nums[i] < third) {
-                return true; // nums[i] < nums[k] < nums[j]
+                return true; 
             }
 
             while (!st.empty() && nums[i] > st.top()) {
