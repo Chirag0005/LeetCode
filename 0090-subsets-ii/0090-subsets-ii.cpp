@@ -7,7 +7,7 @@ public:
             if(i>start && nums[i]==nums[i-1]) continue;
 
             current.push_back(nums[i]);
-            backtracking(i+1, nums, current, result);
+            backtracking(i+1,nums,current,result);
             current.pop_back();
         }
     }
@@ -21,3 +21,7 @@ public:
         return answer;
     }
 };
+
+// i>start It ensures we only skip duplicates within the same recursive level.
+
+// If i == start, that means it's the first time we’re checking this level — so don’t skip anything.
