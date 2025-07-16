@@ -24,7 +24,7 @@ public:
             if(sign==-1 && -ans<INT_MIN) return INT_MIN;
             i++;
         }
-        return sign*ans;
+        return (int)(sign*ans);
 
        }
     
