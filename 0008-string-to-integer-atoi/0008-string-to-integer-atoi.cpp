@@ -4,7 +4,7 @@ public:
        int i=0;
        int sign =1;
        int n = s.length();
-       int ans=0;
+       long long ans=0;
 
        while(i<n && s[i]==' '){
         i++;
