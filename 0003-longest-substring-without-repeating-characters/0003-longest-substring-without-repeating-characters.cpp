@@ -1,15 +1,20 @@
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        vector<int> dict(256,-1);
+        unordered_set<char> seen;
+        int left =0;
+        int right =0;
         int maxLen =0;
-        int start =-1;
-        for(int i=0;i<s.size();i++){
-            if( dict[s[i]] > start ){
-                start = dict[s[i]];
+        while(right < s.length()){
+            if(!seen.count(s[right])){
+                seen.insert(s[right]);
+                maxLen = max(maxLen,right-left+1);
+                right++;
             }
-            dict[s[i]]=i;
-            maxLen = max(maxLen,i-start);
+            else{
+                seen.erase(s[left]);
+                left++;
+            }
         }
         return maxLen;
     }
