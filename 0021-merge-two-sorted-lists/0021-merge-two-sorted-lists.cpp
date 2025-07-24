@@ -32,12 +32,10 @@ public:
             while(list1){
                 tail->next = list1;
                 list1 = list1->next;
-                break;
             }
             while(list2){
                 tail->next = list2;
                 list2 = list2->next;
-                break;
             }
         
         return dummy->next;
