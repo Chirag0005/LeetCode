@@ -6,7 +6,7 @@ public:
         int mid;
         while(start <= end){
             mid = end+(start-end)/2;//imp test case 1 6 4 2 3
-            //  mid = start + (end - start) / 2;
+            // mid = start + (end - start) / 2;
             if(arr[mid]> arr[mid-1] && arr[mid]>arr[mid+1]){
                 return mid;
             }
