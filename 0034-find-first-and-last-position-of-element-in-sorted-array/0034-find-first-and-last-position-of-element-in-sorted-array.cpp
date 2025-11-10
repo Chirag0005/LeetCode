@@ -22,10 +22,10 @@ public:
             }
         }
     
-         start = 0;
+        start = 0;
         end = arr.size()-1;
         while(start<=end){
-            mid = start+(end-start)/2;
+            mid = (start+end)/2;
 
             if(arr[mid]==target){
                 last = mid;
