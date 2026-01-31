@@ -1,7 +1,7 @@
 class Solution {
 public:
 
-    void solve(string digits,string current,int index, vector<string>& ans, vector<string>& map){
+    void solve(string digits,string &current,int index, vector<string>& ans, vector<string>& map){
 
         if(index==digits.length()){
             ans.push_back(current);
