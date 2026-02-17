@@ -13,6 +13,7 @@ public:
     ListNode* middleNode(ListNode* head) {
         ListNode* slow = head;
         ListNode* fast = head;
+        //ListNode* fast = head->next; if we want the first middle 
 
         while(fast && fast->next){
             slow = slow->next;
