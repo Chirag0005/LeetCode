@@ -29,8 +29,8 @@ public:
             while(list1){
                 tail->next = list1;
                 list1 = list1->next;
-                //tail=tail->next;//
-                break;
+                tail=tail->next;//
+                //break;
             }
             while(list2){
                 tail->next = list2;
