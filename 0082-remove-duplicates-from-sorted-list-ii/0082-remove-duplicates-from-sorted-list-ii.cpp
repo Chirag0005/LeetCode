@@ -16,19 +16,50 @@ public:
 
         ListNode* prev = dummy;
 
-        while(head != NULL){
-            // check for duplicates
-            if(head->next != NULL && head->val == head->next->val){
-                // skip all nodes with this value
-                while(head->next != NULL && head->val == head->next->val){
-                    head = head->next;
+        while(head){
+            if(head->next && head->val == head->next->val){
+                while(head->next && head->val == head->next->val){
+                    head= head->next;
                 }
-                prev->next = head->next; // remove all duplicates
-            } else {
-                prev = prev->next; // move prev only if no duplicate
+                prev->next=head->next;
+
             }
-            head = head->next;
+            else{
+                prev = prev->next;
+            }
+            head= head->next;
         }
         return dummy->next;
     }
 };
+
+
+
+
+
+
+
+// class Solution {
+// public:
+//     ListNode* deleteDuplicates(ListNode* head) {
+//         ListNode* dummy = new ListNode(0);
+//         dummy->next = head;
+
+//         ListNode* prev = dummy;
+
+//         while(head != NULL){
+            
+//             if(head->next != NULL && head->val == head->next->val){
+               
+//                 while(head->next != NULL && head->val == head->next->val){
+//                     head = head->next;
+//                 }
+//                 prev->next = head->next; 
+//             } else {
+//                 prev = prev->next; 
+//             }
+//             head = head->next;
+//         }
+//         return dummy->next;
+//     }
+// };
