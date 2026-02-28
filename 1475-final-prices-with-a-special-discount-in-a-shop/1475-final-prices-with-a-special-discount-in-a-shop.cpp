@@ -11,9 +11,11 @@ public:
                 ans[idx] = prices[idx] - prices[i];
             }
             
-            st.push(i);
+           st.push(i);
         }
         return ans;
+        
+        
     }
 };
 
