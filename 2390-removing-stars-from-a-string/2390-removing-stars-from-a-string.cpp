@@ -1,27 +1,42 @@
+// class Solution {
+// public:
+//     string removeStars(string s) {
+
+//         stack<char> st;
+
+//         for(char ch : s){
+
+//             if(ch == '*'){
+//                 if(!st.empty())
+//                     st.pop();
+//             }
+//             else{
+//                 st.push(ch);
+//             }
+//         }
+
+//         string ans="";
+
+//         while(!st.empty()){
+//             ans.push_back(st.top());
+//             st.pop();
+//         }
+//         reverse(ans.begin(),ans.end());
+//         return ans;
+//     }
+// };
+
 class Solution {
 public:
     string removeStars(string s) {
 
-        stack<char> st;
+        string ans;
 
-        for(char ch : s){
-
-            if(ch == '*'){
-                if(!st.empty())
-                    st.pop();
-            }
-            else{
-                st.push(ch);
-            }
+        for(char c : s){
+            if(c == '*') ans.pop_back();
+            else ans.push_back(c);
         }
 
-        string ans="";
-
-        while(!st.empty()){
-            ans.push_back(st.top());
-            st.pop();
-        }
-        reverse(ans.begin(),ans.end());
         return ans;
     }
 };
