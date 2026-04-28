@@ -29,7 +29,7 @@ public:
     }
 
     int kthSmallest(TreeNode* root, int k) {
-        inorder(root, k);
+        inorder(root,k);
         return ans;
     }
 };
