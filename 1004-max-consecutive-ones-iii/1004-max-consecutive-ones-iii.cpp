@@ -11,12 +11,12 @@ public:
                 zeroCount++;
             }
 
-            if(zeroCount>k){
-                if(nums[start]==0){
+            while(zeroCount > k){
+                if(nums[start] == 0){
                     zeroCount--;
-                }
+                    }
                 start++;
-            }
+}
             maxLength = max(maxLength,end-start+1);
         }
         return maxLength;
